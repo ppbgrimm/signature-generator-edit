@@ -415,7 +415,7 @@
         .accordion .icon { font-size: var(--font-size-body-xs); color: var(--color-text-muted); transition: transform var(--duration-slow) ease; }
         .accordion.active .icon { transform: rotate(180deg); color: var(--color-text-brand); }
         .panel { padding: 0 var(--space-6); background-color: var(--card-bg); max-height: 0; overflow: hidden; border: var(--card-border-width) solid var(--color-action-primary); border-top: none; border-radius: 0 0 var(--card-radius) var(--card-radius); margin-top: -10px; margin-bottom: 5px; opacity: 0; transform: translateY(-5px); transition: all var(--duration-slow) ease; }
-        .panel.show { padding: var(--space-6); max-height: 1000px; opacity: 1; transform: translateY(0); margin-bottom: var(--space-4); }
+        .panel.show { padding: var(--space-6); max-height: 2000px; opacity: 1; transform: translateY(0); margin-bottom: var(--space-4); }
         .panel h4 { color: var(--color-text-brand); margin: var(--space-4) 0 var(--space-1); font-size: var(--font-size-h5); font-weight: var(--font-weight-semibold); }
         .panel p { font-size: var(--font-size-body-md); color: var(--color-text-secondary); line-height: var(--line-height-body); margin-bottom: 10px; }
         .panel ul, .panel ol { padding-left: var(--space-5); color: var(--color-text-secondary); font-size: var(--font-size-body-md); line-height: var(--line-height-loose); }
@@ -645,7 +645,7 @@
             </div>
         </div>
         <button class="btn-copy" onclick="copySignature()">Copy to Clipboard</button>
-        <div class="note"><span id="noteText"><strong>Desktop:</strong> เหมาะสำหรับ Outlook บนคอมพิวเตอร์</span></div>
+        <div class="note"><span id="noteText"><strong>Desktop:</strong> เหมาะสำหรับ Outlook บนคอมพิวเตอร์, Outlook on the web และ Gmail</span></div>
     </div>
 </div>
 
@@ -659,43 +659,133 @@
 <div class="guide-container">
     <button class="accordion" id="acc-item-1"><span data-lang="th">1. Microsoft Outlook (Desktop App)</span><span data-lang="en">1. Microsoft Outlook (Desktop App)</span><span class="icon">▼</span></button>
     <div class="panel">
-        <div data-lang="th"><h4>สำหรับ New Outlook (เวอร์ชันใหม่)</h4><ol><li>คลิก <span class="ui-tag">Settings ⚙️</span> > <span class="ui-tag">Accounts</span> > <span class="ui-tag">Signatures</span></li><li><span class="ui-tag">+ New Signature</span> ตั้งชื่อ "B.Grimm"</li><li>ในกล่องข้อความให้กดปุ่ม <code>Ctrl + V</code> เพื่อวางลายเซ็น</li><li>เลือก Default Signature ทั้ง New/Replies เป็น "B.Grimm" แล้วกด <span class="ui-tag">Save</span></li></ol><h4>สำหรับ Classic Outlook</h4><ol><li><span class="ui-tag">File</span> > <span class="ui-tag">Options</span> > <span class="ui-tag">Mail</span> > <span class="ui-tag">Signatures</span></li><li><span class="ui-tag">New</span> > ตั้งชื่อ > วางลายเซ็นโดยกดปุ่ม <code>Ctrl + V</code></li><li>เลือก Default แล้วกด <span class="ui-tag">OK</span></li></ol></div>
-        <div data-lang="en"><h4>For New Outlook</h4><ol><li><span class="ui-tag">Settings ⚙️</span> > <span class="ui-tag">Accounts</span> > <span class="ui-tag">Signatures</span></li><li><span class="ui-tag">New</span> > Paste by pressing <code>Ctrl + V</code> > Set Default > <span class="ui-tag">Save</span></li></ol></div>
+        <div data-lang="th">
+            <p><em>เลือกแท็บ <strong>Desktop</strong> ด้านบนแล้วกด <span class="ui-tag">Copy to Clipboard</span> ก่อนเริ่มตั้งค่า</em></p>
+            <h4>New Outlook for Windows (เวอร์ชันใหม่)</h4>
+            <ol>
+                <li>คลิก <span class="ui-tag">Settings ⚙️</span> > <span class="ui-tag">Accounts</span> > <span class="ui-tag">Signatures</span></li>
+                <li>หากมีหลายบัญชี ให้เลือกบัญชีอีเมลที่ต้องการใช้ลายเซ็น</li>
+                <li>คลิก <span class="ui-tag">Add signature</span> แล้วตั้งชื่อ เช่น "B.Grimm"</li>
+                <li>คลิกในกล่องแก้ไขลายเซ็น แล้ววางโดยกดปุ่ม <code>Ctrl + V</code></li>
+                <li>ด้านล่างกล่อง เลือกให้ใช้ลายเซ็นนี้กับข้อความใหม่ (new messages) และการตอบกลับ/ส่งต่อ (replies and forwards) แล้วกด <span class="ui-tag">Save</span></li>
+            </ol>
+            <h4>Classic Outlook for Windows (เวอร์ชันเดิม)</h4>
+            <ol>
+                <li>ไปที่ <span class="ui-tag">File</span> > <span class="ui-tag">Options</span> > <span class="ui-tag">Mail</span> > <span class="ui-tag">Signatures...</span> <em>(หรือเปิดอีเมลใหม่ แล้วเลือก <span class="ui-tag">Signature</span> > <span class="ui-tag">Signatures...</span> ในแท็บ Message)</em></li>
+                <li>ในช่อง <strong>E-mail account</strong> เลือกบัญชีอีเมลของคุณ</li>
+                <li>ใต้ <strong>Select signature to edit</strong> คลิก <span class="ui-tag">New</span> > ตั้งชื่อลายเซ็น > <span class="ui-tag">OK</span></li>
+                <li>คลิกในกล่อง <strong>Edit signature</strong> แล้ววางโดยกดปุ่ม <code>Ctrl + V</code></li>
+                <li>ใต้ <strong>Choose default signature</strong> เลือกชื่อลายเซ็นในช่อง <strong>New messages</strong> และ <strong>Replies/forwards</strong> แล้วกด <span class="ui-tag">OK</span></li>
+            </ol>
+            <h4>Outlook for Mac</h4>
+            <ol>
+                <li>ที่เมนู <span class="ui-tag">Outlook</span> เลือก <span class="ui-tag">Settings</span> > ใต้ <strong>Mail</strong> เลือก <span class="ui-tag">Signatures</span> <em>(Legacy Outlook for Mac: ใต้ <strong>Email</strong>)</em></li>
+                <li>คลิก <span class="ui-tag">+</span> เพื่อเพิ่มลายเซ็นใหม่ ตั้งชื่อ แล้ววางในช่องแก้ไขโดยกดปุ่ม <code>⌘ + V</code></li>
+                <li>ใต้ <strong>Set default signature</strong> เลือกบัญชี แล้วตั้งค่า <strong>For new messages</strong> และ <strong>For replies or forwards</strong> เป็นลายเซ็นนี้ จากนั้นปิดหน้าต่าง Signatures</li>
+            </ol>
+            <p><em>หมายเหตุ: สำหรับบัญชี Microsoft 365 ลายเซ็นของ New Outlook จะถูกเก็บไว้ในเมลบ็อกซ์ (คลาวด์) และใช้ร่วมกับ Outlook on the web ส่วน Classic Outlook (เวอร์ชัน 2303 ขึ้นไป) จะซิงก์ลายเซ็นที่ตั้งเป็นค่าเริ่มต้นไปด้วย ยกเว้นองค์กรปิดฟีเจอร์นี้ไว้ ทั้งนี้ Outlook for Mac และแอปมือถือต้องตั้งค่าแยกในแต่ละเครื่อง</em></p>
+        </div>
+        <div data-lang="en">
+            <p><em>Select the <strong>Desktop</strong> tab above and click <span class="ui-tag">Copy to Clipboard</span> before you start.</em></p>
+            <h4>New Outlook for Windows</h4>
+            <ol>
+                <li>Click <span class="ui-tag">Settings ⚙️</span> > <span class="ui-tag">Accounts</span> > <span class="ui-tag">Signatures</span></li>
+                <li>If you have more than one account, select the account to apply the signature to</li>
+                <li>Click <span class="ui-tag">Add signature</span> and give it a name (e.g. "B.Grimm")</li>
+                <li>Click inside the editing box and paste by pressing <code>Ctrl + V</code></li>
+                <li>At the bottom, choose to apply it to new messages and to replies and forwards, then click <span class="ui-tag">Save</span></li>
+            </ol>
+            <h4>Classic Outlook for Windows</h4>
+            <ol>
+                <li>Go to <span class="ui-tag">File</span> > <span class="ui-tag">Options</span> > <span class="ui-tag">Mail</span> > <span class="ui-tag">Signatures...</span> <em>(or open a new email and select <span class="ui-tag">Signature</span> > <span class="ui-tag">Signatures...</span> on the Message tab)</em></li>
+                <li>In <strong>E-mail account</strong>, choose your email account</li>
+                <li>Under <strong>Select signature to edit</strong>, click <span class="ui-tag">New</span> > type a name > <span class="ui-tag">OK</span></li>
+                <li>Click inside <strong>Edit signature</strong> and paste by pressing <code>Ctrl + V</code></li>
+                <li>Under <strong>Choose default signature</strong>, select your signature for <strong>New messages</strong> and <strong>Replies/forwards</strong>, then click <span class="ui-tag">OK</span></li>
+            </ol>
+            <h4>Outlook for Mac</h4>
+            <ol>
+                <li>On the <span class="ui-tag">Outlook</span> menu, select <span class="ui-tag">Settings</span> > under <strong>Mail</strong>, select <span class="ui-tag">Signatures</span> <em>(Legacy Outlook for Mac: under <strong>Email</strong>)</em></li>
+                <li>Click <span class="ui-tag">+</span> to add a new signature, name it, then paste into the editor by pressing <code>⌘ + V</code></li>
+                <li>Under <strong>Set default signature</strong>, select your account and set <strong>For new messages</strong> and <strong>For replies or forwards</strong>, then close the Signatures window</li>
+            </ol>
+            <p><em>Note: For Microsoft 365 accounts, new Outlook stores signatures in your mailbox (cloud) and shares them with Outlook on the web. Classic Outlook (version 2303 or later) also roams signatures set as defaults, unless your organization has turned this off. Outlook for Mac and the mobile app must be set up separately on each device.</em></p>
+        </div>
     </div>
     <button class="accordion"><span data-lang="th">2. Outlook on the Web (Microsoft 365)</span><span data-lang="en">2. Outlook on the Web (Microsoft 365)</span><span class="icon">▼</span></button>
     <div class="panel">
         <div data-lang="th">
             <ol>
-                <li>ไปที่ Outlook บนเว็บ คลิก <span class="ui-tag">Settings ⚙️</span> ที่มุมขวาบน</li>
-                <li>เลือกเมนู <span class="ui-tag">Mail</span> ทางด้านซ้าย แล้วเลือก <span class="ui-tag">Compose and reply</span></li>
-                <li><em>หมายเหตุ: หากไม่พบเมนูนี้ ให้ลองไปที่ <span class="ui-tag">Accounts</span> > <span class="ui-tag">Signatures</span></em></li>
-                <li>ที่หัวข้อ <strong>Email signature</strong> ให้คลิกปุ่ม <span class="ui-tag">+ New signature</span></li>
-                <li>ตั้งชื่อลายเซ็น แล้วคลิกในกล่องข้อความเพื่อวางข้อมูลโดยกดปุ่ม <code>Ctrl + V</code></li>
-                <li>ที่หัวข้อ <strong>Select default signatures</strong> ให้เลือกชื่อลายเซ็นใหม่ของคุณในทั้ง 2 ช่อง</li>
+                <li>เลือกแท็บ <strong>Desktop</strong> ด้านบนแล้วกด <span class="ui-tag">Copy to Clipboard</span></li>
+                <li>ไปที่ Outlook บนเว็บ (outlook.office.com) คลิก <span class="ui-tag">Settings ⚙️</span> ที่มุมขวาบน</li>
+                <li>เลือก <span class="ui-tag">Accounts</span> > <span class="ui-tag">Signatures</span></li>
+                <li>คลิก <span class="ui-tag">Add signature</span> แล้วตั้งชื่อลายเซ็น</li>
+                <li>คลิกในกล่องแก้ไขลายเซ็น แล้ววางโดยกดปุ่ม <code>Ctrl + V</code></li>
+                <li>ด้านล่างกล่อง เลือกให้ใช้ลายเซ็นนี้กับข้อความใหม่ (new messages) และการตอบกลับ/ส่งต่อ (replies and forwards)</li>
                 <li>กดปุ่ม <span class="ui-tag">Save</span></li>
             </ol>
+            <p><em>หมายเหตุ: ลายเซ็นที่สร้างใน Outlook on the web จะถูกเก็บไว้บนคลาวด์และแสดงใน New Outlook for Windows ด้วย (ขั้นตอนเหมือนกัน) จึงไม่ต้องสร้างซ้ำ</em></p>
         </div>
         <div data-lang="en">
             <ol>
-                <li>Go to Outlook Web > Click <span class="ui-tag">Settings ⚙️</span> (top right)</li>
-                <li>Select <span class="ui-tag">Mail</span> > <span class="ui-tag">Compose and reply</span></li>
-                <li><em>Note: If missing, check <span class="ui-tag">Accounts</span> > <span class="ui-tag">Signatures</span></em></li>
-                <li>Under <strong>Email signature</strong>, click <span class="ui-tag">+ New signature</span></li>
-                <li>Name it, then click inside the box and paste by pressing <code>Ctrl + V</code></li>
-                <li>Under <strong>Select default signatures</strong>, choose your new signature for both options</li>
+                <li>Select the <strong>Desktop</strong> tab above and click <span class="ui-tag">Copy to Clipboard</span></li>
+                <li>Go to Outlook on the web (outlook.office.com) > click <span class="ui-tag">Settings ⚙️</span> (top right)</li>
+                <li>Select <span class="ui-tag">Accounts</span> > <span class="ui-tag">Signatures</span></li>
+                <li>Click <span class="ui-tag">Add signature</span> and give it a name</li>
+                <li>Click inside the editing box and paste by pressing <code>Ctrl + V</code></li>
+                <li>At the bottom, choose to apply it to new messages and to replies and forwards</li>
                 <li>Click <span class="ui-tag">Save</span></li>
             </ol>
+            <p><em>Note: Signatures created in Outlook on the web are stored in the cloud and also appear in new Outlook for Windows (the steps are the same), so you don't need to create them twice.</em></p>
         </div>
     </div>
     <button class="accordion"><span data-lang="th">3. Google Workspace (Gmail)</span><span data-lang="en">3. Google Workspace (Gmail)</span><span class="icon">▼</span></button>
     <div class="panel">
-        <div data-lang="th"><ol><li><span class="ui-tag">Settings ⚙️</span> > <span class="ui-tag">See all settings</span></li><li><span class="ui-tag">Signature</span> > <span class="ui-tag">+ Create new</span> > วางโดยกดปุ่ม <code>Ctrl + V</code></li><li>Signature defaults เลือกชื่อลายเซ็น > <span class="ui-tag">Save Changes</span></li></ol></div>
-        <div data-lang="en"><ol><li><span class="ui-tag">Settings ⚙️</span> > <span class="ui-tag">All settings</span> > <span class="ui-tag">Signature</span></li><li><span class="ui-tag">Create</span> > Paste by pressing <code>Ctrl + V</code> > Set Defaults > <span class="ui-tag">Save</span></li></ol></div>
+        <div data-lang="th">
+            <ol>
+                <li>เลือกแท็บ <strong>Desktop</strong> ด้านบนแล้วกด <span class="ui-tag">Copy to Clipboard</span></li>
+                <li>เปิด Gmail บนคอมพิวเตอร์ คลิก <span class="ui-tag">Settings ⚙️</span> ที่มุมขวาบน > <span class="ui-tag">See all settings</span></li>
+                <li>ในแท็บ <span class="ui-tag">General</span> เลื่อนลงไปที่หัวข้อ <strong>Signature</strong> แล้วคลิก <span class="ui-tag">+ Create new</span> ตั้งชื่อลายเซ็น</li>
+                <li>คลิกในกล่องข้อความ แล้ววางโดยกดปุ่ม <code>Ctrl + V</code></li>
+                <li>ที่ <strong>Signature defaults</strong> เลือกชื่อลายเซ็นสำหรับอีเมลใหม่ (For new emails use) และการตอบกลับ/ส่งต่อ (On reply/forward use)</li>
+                <li>เลื่อนลงไปด้านล่างสุดของหน้า แล้วคลิก <span class="ui-tag">Save Changes</span></li>
+            </ol>
+            <p><em>หมายเหตุ: ลายเซ็นใช้ได้ไม่เกิน 10,000 ตัวอักษร (รวมรูปภาพ)</em></p>
+        </div>
+        <div data-lang="en">
+            <ol>
+                <li>Select the <strong>Desktop</strong> tab above and click <span class="ui-tag">Copy to Clipboard</span></li>
+                <li>Open Gmail on a computer > click <span class="ui-tag">Settings ⚙️</span> (top right) > <span class="ui-tag">See all settings</span></li>
+                <li>On the <span class="ui-tag">General</span> tab, scroll to <strong>Signature</strong>, click <span class="ui-tag">+ Create new</span> and name it</li>
+                <li>Click inside the text box and paste by pressing <code>Ctrl + V</code></li>
+                <li>Under <strong>Signature defaults</strong>, choose your signature for new emails (For new emails use) and replies/forwards (On reply/forward use)</li>
+                <li>Scroll to the bottom of the page and click <span class="ui-tag">Save Changes</span></li>
+            </ol>
+            <p><em>Note: Signatures can be up to 10,000 characters (images count toward the limit).</em></p>
+        </div>
     </div>
     <button class="accordion"><span data-lang="th">4. Mobile (Outlook App)</span><span data-lang="en">4. Mobile (Outlook App)</span><span class="icon">▼</span></button>
     <div class="panel">
-        <div data-lang="th"><ol><li>เปลี่ยน Tab ด้านบนเป็น <strong>Mobile</strong> แล้วกด <span class="ui-tag">Copy to Clipboard</span></li><li>ในแอป Outlook แตะรูปโปรไฟล์ > <span class="ui-tag">Settings ⚙️</span></li><li><span class="ui-tag">Signature</span> > ลบของเก่า > กดวาง (Paste)</li></ol></div>
-        <div data-lang="en"><ol><li>Switch to <strong>Mobile</strong> tab > <span class="ui-tag">Copy to Clipboard</span></li><li>Outlook App > <span class="ui-tag">Settings</span> > <span class="ui-tag">Signature</span> > Paste</li></ol></div>
+        <div data-lang="th">
+            <ol>
+                <li>เปลี่ยนแท็บด้านบนเป็น <strong>Mobile</strong> แล้วกด <span class="ui-tag">Copy to Clipboard</span></li>
+                <li>ในแอป Outlook (iOS/Android) แตะไอคอนบัญชี/รูปโปรไฟล์ที่มุมซ้ายบน > แตะ <span class="ui-tag">Settings ⚙️</span></li>
+                <li>ใต้หัวข้อ <strong>Mail</strong> แตะ <span class="ui-tag">Signature</span></li>
+                <li>หากมีหลายบัญชีและต้องการลายเซ็นแยกกัน ให้เปิด <span class="ui-tag">Per Account Signature</span> แล้วเลือกบัญชี</li>
+                <li>ลบข้อความเดิม แล้วกดค้างเพื่อวาง (Paste) ลายเซ็นใหม่ จากนั้นกลับออกมา (ระบบบันทึกให้อัตโนมัติ)</li>
+            </ol>
+            <p><em>หมายเหตุ: แอปมือถือรองรับการจัดรูปแบบลายเซ็นได้จำกัด (เช่น รูปภาพหรือตารางอาจแสดงไม่ถูกต้อง) จึงควรใช้รูปแบบ Mobile และลายเซ็นในแอปมือถือต้องตั้งค่าแยกจากคอมพิวเตอร์</em></p>
+        </div>
+        <div data-lang="en">
+            <ol>
+                <li>Switch to the <strong>Mobile</strong> tab above > <span class="ui-tag">Copy to Clipboard</span></li>
+                <li>In the Outlook app (iOS/Android), tap your account/profile icon (top left) > tap <span class="ui-tag">Settings ⚙️</span></li>
+                <li>Under <strong>Mail</strong>, tap <span class="ui-tag">Signature</span></li>
+                <li>To use a different signature for each account, turn on <span class="ui-tag">Per Account Signature</span> and pick the account</li>
+                <li>Delete the old text, long-press to Paste the new signature, then go back (it saves automatically)</li>
+            </ol>
+            <p><em>Note: The mobile app has limited signature formatting support (e.g. images or tables may not display correctly), so use the Mobile template. Mobile signatures are set up separately from your computer.</em></p>
+        </div>
     </div>
 </div>
 
@@ -805,7 +895,7 @@
         
         document.getElementById('previewDesktop').style.display = (tab === 'desktop') ? 'block' : 'none';
         document.getElementById('previewMobile').style.display = (tab === 'mobile') ? 'block' : 'none';
-        document.getElementById('noteText').innerHTML = (tab === 'desktop') ? '<strong>Desktop:</strong> เหมาะสำหรับ Outlook บนคอมพิวเตอร์' : '<strong>Mobile:</strong> เหมาะสำหรับ iPhone/Android (ข้อความล้วน)';
+        document.getElementById('noteText').innerHTML = (tab === 'desktop') ? '<strong>Desktop:</strong> เหมาะสำหรับ Outlook บนคอมพิวเตอร์, Outlook on the web และ Gmail' : '<strong>Mobile:</strong> เหมาะสำหรับ iPhone/Android (ข้อความล้วน)';
     }
 
     /* PLACEHOLDER & WARN TOGGLE */
